@@ -1,0 +1,82 @@
+<UI>:
+    id:scr_manager
+    Dlt_a1:
+    Dlt_a2:    
+####### Scr 1 #######
+<Dlt_a1>:
+    name: "Dlt_a1"
+    BoxLayout:
+    	spacing: dp(10)
+		orientation: 'vertical'
+		padding: [0, dp(20), 0, 0]
+		canvas.before:
+			Color:
+				rgba:[1,1,1,1]
+			RoundedRectangle:
+				radius:[dp(50),]
+				pos:self.pos
+				size:self.size
+				source: 'dlt.png'
+    Button:
+        text: 'เข้าสู่ระบบ'
+        font_name: 'tahoma'
+        size_hint: 0.50 , 0.10
+        background_color: 'yellow'
+        pos_hint: {'center_x': 0.5,'center_y': 0.50}
+        on_press: app.root.current = "Dlt_a2"
+    Button:
+        text: 'ลงทะเบียนใหม่'
+        font_name: 'tahoma'
+        size_hint: 0.50 , 0.10
+        background_color: 'purple'
+        pos_hint: {'center_x': 0.5,'center_y': 0.38}
+    Button:
+        text: 'For Foreigner'
+        font_name: 'tahoma'
+        size_hint: 0.50 , 0.10
+        background_color: 'blue'
+        pos_hint: {'center_x': 0.5,'center_y': 0.26}
+
+####### Scr 2 #######
+<Dlt_a2>:
+    name: "Dlt_a2"
+    BoxLayout:
+    	spacing: dp(10)
+		orientation: 'vertical'
+		padding: [0, dp(20), 0, 0]
+		canvas.before:
+			Color:
+    			rgba:[1,1,1,1]
+			RoundedRectangle:
+				radius:[dp(50),]
+				pos:self.pos
+				size:self.size
+				source: 'dlt.png'
+        TextInput:
+            id: txt_Dlt1
+            hint_text: "ระบุเลขบัตรประชาชน"
+            font_name: 'tahoma'
+            font_size: 15
+            size_hint: 0.60,0.07
+            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+        TextInput:
+            id: txt_Dlt2
+            hint_text: "ระบุเลขบัตรประชาชนอีกครั้ง"
+            font_name: 'tahoma'
+            font_size: 15
+            size_hint: 0.60,0.07
+            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+        TextInput:
+            id: txt_Dlt3
+            hint_text: "ระบุเบอร์โทรศัพท์"
+            font_name: 'tahoma'
+            font_size: 15
+            size_hint: 0.60,0.07
+            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+        TextInput:
+            id: txt_Dlt4
+            hint_text: "ระบุอีเมล"
+            font_name: 'tahoma'
+            font_size: 15
+            size_hint: 0.60,0.07
+            pos_hint: {'center_x': 0.5,'center_y': 0.5}
